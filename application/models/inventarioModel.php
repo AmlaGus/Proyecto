@@ -8,13 +8,12 @@ class inventarioModel extends CI_Model{
     }
 
    
-   
 
-    function insertarProducto($categoria)
+    function insertarProducto($bien)
     {
         
         //var_dump($empleado);exit;
-       return $this->db->insert('categoria', $categoria);
+       return $this->db->insert('productos', $bien['productos']);
     }
 
     function insertarEmpleado($empleado)

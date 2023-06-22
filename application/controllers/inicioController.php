@@ -7,6 +7,7 @@ class inicioController extends CI_Controller
         parent:: __construct();
         $this->load->model('empleadoModel');
         $this->load->model('categoriaModel');
+        $this->load->model('inventarioModel');
        // $this->load->model('administradorModel');
 
         /*verificar la session
@@ -54,16 +55,21 @@ class inicioController extends CI_Controller
       $this->index();
   }
 
+
+
+
+
   function registrarBienes(){
 
-    $cat['categoria' = $this->categoriaModel->obtenerCatg();
-    $this->load->view('Inventario/ingresarBienes');
-    $this->index();
+    $cat['categoria'] = $this->categoriaModel->obtenerCatg();
+    $this->load->view('Inventario/ingresarBienes', $cat);
   }
 
 
 function registroBien(){
     $bien = $this->input->post();
+
+    //var_dump ($bien); exit;
     $respuesta = $this->inventarioModel->insertarProducto($bien);
     $this->load->view('Empleados/registroExitoso');
       $this->index();
