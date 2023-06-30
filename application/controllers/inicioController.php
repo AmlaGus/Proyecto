@@ -55,6 +55,84 @@ class inicioController extends CI_Controller
       $this->index();
   }
 
+  function eliminarCategoria(){
+    $this->categoriaModel->borrarCategoria();
+    redirect(base_url('index.php/inicioController/registrarCategoria'), 'refresh');
+  }
+
+  function edit($id_categoria = NULL){
+    if($id_categoria != NULL){
+        //mostrar datos
+        $data['datosCategoria'] = $this->categoriaModel->obtenerCategoriaEspecifico($id_categoria);
+        $this->load->view('Categoria/edit', $data);
+    }else{
+        //regresar y enviar parametro
+        redirect ('');
+    }
+
+  }
+
+  function updateCat(){
+    $datos = $this->input->post();
+    if(isset($datos)){
+        $txtId = $datos['id_categoria'];
+        $txtDescripcion = $datos['descripcion'];
+        $this->categoriaModel->updateCategoria($txtId, $txtDescripcion);
+        redirect ('');
+    }
+  }
+
+
+
+
+
+
+
+  function editarCat(){  
+    $this->CategoriaModel->borrarCategoria();
+    redirect(base_url('index.php/CategoriaController/'), 'refresh');  
+}
+
+  function editarCategoria(){
+
+
+    if($_POST){
+        $this->CategoriaModel->editarCate($_POST);
+    }
+    $this->load->view('Categoria/editarCategoria');
+}
+
+function editCategoria()
+  {
+
+    var_dump($id_categoria);exit;
+   echo $id_categoria;exit;
+    $data['categoria'] = $this->categoriaModel->getCat($id_categoria);
+    $data['title'] = "Editar Categoria";
+    $this->load->view('Categoria/editarCategoria', $data['id_categoria']);     
+  }
+
+function update($id_categoria){
+    $data['data-categoria']=$this->categoriaModel->get_categoria_byID();
+    if(!empty($data['data-categoria'])){
+        $this->load->view('Categoria/editarCategoria',$data);
+    }else{
+        redirect(site_url());
+    }
+
+}
+
+
+function registrarCategoriaActualizada($id_categoria)
+{
+    //$data['permiso'] = $this->UsuarioModel->obtenerPermisoUsuario($this->session->userdata('id_usuario'));
+    $datosCat = $this->input->post();
+    var_dump($datosCat); exit;
+    $this->categoriaModel->registroCategoria($datosCat);
+    redirect(base_url('index.php/inicioController/'));
+}
+
+
 
 
 
@@ -81,8 +159,6 @@ function registroBien(){
 
 
     function registroEmplead(){
-
-
         if($this->input->post()){
 
             $nombre = $_POST["nombre"];
@@ -106,4 +182,12 @@ function registroBien(){
         $this->load->view('Empleado/registroExitoso');
         $this->index();
     }
+
+
+
+
+
+
 }
+
+

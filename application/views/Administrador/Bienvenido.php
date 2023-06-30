@@ -1,4 +1,6 @@
-<html>
+
 
 jolas
-    </html>
+</div>
+
+    <?php $this->load->view('Plantilla/Footer'); ?>

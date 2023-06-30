@@ -1,13 +1,77 @@
-<footer>
-    <div class="container">
-        <p>2023 <a href="http://civika.com.mx">Instituto Estatal de la Mujer</a> &mdash;
-            <strong>Teléfono:</strong> <a href="tel:+522411132090">(241) 113 2090 </a>
-            &nbsp;&nbsp;<strong>Dirección:</strong> Ex-Fabrica de San Manuel s/n, Santa Cruz Tlaxcala&mdash; <a href="Politica_de_privacidad.html">Política de Privacidad</a> &nbsp;&nbsp;
 
-    </div>
-    <a class="go-top" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+</div>
+</section>
+<footer id="footer" class="text-center text-white" style="background-color: #f1f1f1;">
+  <!-- Grid container -->
+  <div class="container">
+    <!-- Seccion Redes Sociales-->
+    <section class="mb-7">
+      <!-- Facebook -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-info m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-info m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google 
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-google"></i
+      ></a>
+-->
+      <!-- Instagram -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin 
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      -->
+      <!-- Github 
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-github"></i
+      ></a>
+      -->
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);"> -->
+  <div class="text-center text-dark p-3" style="background-color: #c5ba9f">
+    © 2023 Instituto Estatal de la Mujer<br>
+    <a class="text-dark" href="https://mujer.tlaxcala.gob.mx/">https://mujer.tlaxcala.gob.mx/</a>
+  </div>
+  <!-- Copyright -->
 </footer>
-
 <script type="text/javascript">
     var base_url = '<?php echo base_url()?>';
 </script>
